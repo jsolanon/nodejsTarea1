@@ -1,0 +1,21 @@
+{
+  "name": "tarea1",
+  "version": "1.0.0",
+  "description": "Tarea 1 del Curso Node JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index",
+    "debug": "nodemon dist/index",
+    "webpack": "rm -rf dist  && webpack --config webpack.config.ts",
+    "build:prod": "rm -rf dist  && webpack --NODE_ENV=production --mode production --config webpack.config.prod.ts",
+    "postinstall": "npm run build:prod",
+    "build:dev": "rm -rf dist && tsc",
+    "build": "rm -rf dist && webpack --config webpack.config.ts"
+  },
+  "author": "Julio Solano",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "^4.0.0"
+  }
+}
